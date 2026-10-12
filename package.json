@@ -1,0 +1,65 @@
+{
+  "name": "@red-cup-engineering/parlor-kernel",
+  "version": "0.3.0",
+  "type": "module",
+  "description": "The shared kernel for the parlor shelf's dice, board-race, and slot games: seeded dice rolls with exact PMFs (dice), a pure turn/round reducer over intents (turns), a board-as-directed-graph with chute/ladder jump edges (board), Pig/Farkle/Yacht scoring folds (tally), computed bust/expectation/RTP odds (odds), slot reels as data with seeded spins (reels), multi-reel/multi-payline grid evaluation with wilds, scatters, and exact multi-line RTP by full-grid enumeration (paylines — added 2026-08-29 for Cowrie Casino's 5x3 video slot, additive to reels/odds), the reversible/priced/terminal spend classifier (disclosure). One small kernel, games as data plus a thin face.",
+  "keywords": [
+    "561-group",
+    "parlor-kernel",
+    "dice-games",
+    "board-games",
+    "slot-machine",
+    "odds",
+    "deterministic",
+    "cartridge"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
+  "dependencies": {
+    "@red-cup-engineering/computer-data-engineering-services-section": "workspace:*",
+    "@red-cup-engineering/gaming": "workspace:*"
+  },
+  "exports": {
+    "./seed": {
+      "default": "./src/seed.mjs"
+    },
+    "./dice": {
+      "default": "./src/dice.mjs"
+    },
+    "./turns": {
+      "default": "./src/turns.mjs"
+    },
+    "./board": {
+      "default": "./src/board.mjs"
+    },
+    "./tally": {
+      "default": "./src/tally.mjs"
+    },
+    "./odds": {
+      "default": "./src/odds.mjs"
+    },
+    "./reels": {
+      "default": "./src/reels.mjs"
+    },
+    "./paylines": {
+      "default": "./src/paylines.mjs"
+    },
+    "./disclosure": {
+      "default": "./src/disclosure.mjs"
+    },
+    "./fixtures/pig-fixture": {
+      "default": "./src/fixtures/pig-fixture.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "check": "for f in src/*.mjs src/fixtures/*.mjs; do node --check \"$f\" || exit 1; done",
+    "test": "node --test src/*.test.mjs src/fixtures/*.test.mjs"
+  }
+}
