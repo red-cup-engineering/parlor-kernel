@@ -3,6 +3,11 @@
   "version": "0.3.1",
   "type": "module",
   "description": "The shared kernel for the parlor shelf's dice, board-race, and slot games: seeded dice rolls with exact PMFs (dice), a pure turn/round reducer over intents (turns), a board-as-directed-graph with chute/ladder jump edges (board), Pig/Farkle/Yacht scoring folds (tally), computed bust/expectation/RTP odds (odds), slot reels as data with seeded spins (reels), multi-reel/multi-payline grid evaluation with wilds, scatters, and exact multi-line RTP by full-grid enumeration (paylines \u2014 added 2026-08-29 for Cowrie Casino's 5x3 video slot, additive to reels/odds), the reversible/priced/terminal spend classifier (disclosure). One small kernel, games as data plus a thin face.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/red-cup-engineering/computer-systems-engineering-services-section.git",
+    "directory": "services/computer-game-system-services-section/services/parlor-kernel"
+  },
   "keywords": [
     "561-group",
     "parlor-kernel",
